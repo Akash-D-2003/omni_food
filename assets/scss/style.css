@@ -58,11 +58,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.main-header .navigation #check {
-  display: none;
-}
 .main-header .navigation .nav-logo {
   height: 2.2rem;
+}
+.main-header .navigation .nav-button {
+  display: none;
 }
 .main-header .navigation .nav-items {
   display: flex;
@@ -70,6 +70,7 @@ body {
   justify-content: space-between;
   list-style: none;
   gap: 30px;
+  position: relative;
 }
 .main-header .navigation .nav-items .nav-btn {
   color: white;
@@ -87,6 +88,11 @@ body {
 }
 .main-header .navigation .nav-items a:hover {
   color: #cf711f;
+}
+.main-header .navigation .nav-items .close-menu {
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
 
 .meal {
@@ -663,28 +669,11 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .main-header .navigation {
+    padding: 0 20px;
+  }
   .main-header .navigation .nav-button {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0.2rem;
-    margin-right: 20px;
-    z-index: 4;
-  }
-  .main-header .navigation .nav-button label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-    margin-top: 20px;
-  }
-  .main-header .navigation .nav-button label span {
     display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 3px solid orangered;
-    margin-right: 20px;
   }
   .main-header .navigation .nav-items {
     width: 100%;
@@ -702,7 +691,7 @@ body {
     background-color: #333;
     flex-direction: column;
     transition: all 0.5s;
-    gap: 10rem;
+    gap: 5rem;
   }
   .main-header .navigation .nav-items li {
     width: 100%;
@@ -714,8 +703,8 @@ body {
   .main-header .navigation .nav-items .btn {
     font-size: 2rem;
   }
-  .main-header .navigation #check:checked ~ .nav-items {
-    left: 0;
+  .meal .meal-section {
+    padding: 0 20px;
   }
   .feature .feature-img {
     justify-content: center;

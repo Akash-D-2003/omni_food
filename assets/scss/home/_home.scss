@@ -15,16 +15,17 @@
     height: 9.6rem;
     padding: 0 4.8rem;
     @include Flex;
-    #check {
-      display: none;
-    }
     .nav-logo {
       height: 2.2rem;
+    }
+    .nav-button {
+      display: none;
     }
     .nav-items {
       @include Flex;
       list-style: none;
       gap: 30px;
+      position: relative;
       .nav-btn {
         color: #ffff;
         background-color: #e67e22;
@@ -42,6 +43,11 @@
         &:hover {
           color: #cf711f;
         }
+      }
+      .close-menu {
+        position: absolute;
+        top: 40px;
+        right: 20px;
       }
     }
   }
